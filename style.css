@@ -1,0 +1,74 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000; /* Karanlık arka plan */
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: #111; /* Labirent alanı (daha karanlık) */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#light-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; /* Üstte olacak şekilde ayarlama */
+    pointer-events: none; /* Mouse etkileşimlerini engelle */
+}
+
+.wall {
+    position: absolute;
+    background-color: #333; /* Duvarların rengi */
+    z-index: 1;
+}
+
+.obstacle {
+    position: absolute;
+    background-color: #555; /* Engellerin rengi */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.trap {
+    position: absolute;
+    background-color: red; /* Tuzakların rengi */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#player {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2; /* Oyuncu önde olacak */
+    top: 290px; /* Başlangıç pozisyonu */
+    left: 290px; /* Başlangıç pozisyonu */
+}
+
+#exit {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: green; /* Çıkış noktası rengi */
+    z-index: 1;
+}
+
+#scoreboard {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
